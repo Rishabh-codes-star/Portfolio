@@ -1,0 +1,453 @@
+:root {
+    --primary-color: #0A0A0A;
+    --border-color: #D4D4D4;
+    --secondary-color: #A3A3A3;
+    --font-size-large: 20px;
+    --font-size-medium: 18px;
+    --font-size-small: 16px;
+    --font-size-smaller:14px;
+
+    --font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+    }
+    @supports (font-variation-settings: normal) {
+    :root { font-family: InterDisplay, sans-serif; }
+    }
+  
+body {
+    color: var(--primary-color);
+    font-family: var(--font-family);
+    scroll-behavior: smooth;
+  }
+
+  
+.main{
+    font-family: Inter, display;
+    display: flex;
+    flex-direction: column;
+    margin-top: 136px;
+    font-weight: 400;
+}
+.logo{
+    position: absolute;
+    top: 16px;
+    left: 30px;
+    font-weight: 700; 
+    font-size: 30px; 
+    font-family: Noto Sans Devanagari, sans-serif;
+    z-index: 3;
+}
+.hindi-name{
+    font-weight: 700; 
+    font-size: 18px; 
+    font-family: Noto Sans Devanagari, sans-serif; display:none;
+}
+.name{
+    font-weight: normal;
+    font-size: var(--font-size-medium);
+}
+
+.sleeping-boy{
+    margin-left: 22px;
+}
+.content{
+    display: grid;
+    width: 90%;
+    margin: 0 15px;
+}
+.date{
+    color: var(--secondary-color);
+    font-size: var(--font-size-medium);
+    position: relative;
+    top: -13px;
+}
+p{
+    line-height: 24px;
+    margin: 10px 0;
+}
+
+h2{
+    font-weight: 500;
+    font-size: var(--font-size-medium);
+    margin-top: 25px;
+}
+
+
+.hamburger-icon{
+    cursor: pointer;
+    position: absolute; /* Keep the hamburger icon in a fixed position */
+    top: 16px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    z-index: 3; /* Ensure it stays above the menu */
+    transition: transform 0.1s ease; 
+}
+
+.menu-items {
+    position: fixed; 
+    top: 20px;
+    right: 0; 
+    width: 100%; 
+    height: 100%;
+    transform: translateX(100%);
+    background-color: rgb(255, 255, 255); 
+    transition: transform 0.3s ease; 
+    font-size: var(--font-size-small);
+    z-index: 2; 
+}
+
+.menu-items.active {
+    transform: translateX(0); 
+    background-color: #ffffff; 
+}
+
+.menu-items ul {
+    list-style: none;
+    padding: 20px;
+    margin-left: 10px;
+    text-align: right; 
+    margin-top: 20px;
+}
+
+.menu-items li {
+    padding: 5px 0;
+}
+
+.menu-items a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: var(--font-size-small);
+    white-space: nowrap;
+}
+.menu-items a:hover{
+    color: var(--primary-color);
+    transition: 0.75s ease;
+}
+
+.icon.active svg {
+    transform: rotate(0); 
+}
+.navbar{
+    margin-top: -60px;
+}
+
+
+
+.image-container img{
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.caption{
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: var(--font-size-smaller);
+}
+
+.article-list{
+    margin-left: 10px;
+}
+
+.article-item {
+    display: flex;
+    justify-content:space-between; 
+    padding: 7px 0 ;
+    line-height: 15px;
+}
+
+.article-name {
+    font-size: var(--font-size-medium);
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+.article-name:hover{
+    color: var(--secondary-color);
+}
+
+.article-date {
+    font-size: var(--font-size-medium);
+    color: var(--secondary-color);
+}
+
+.category-button {
+    background-color: transparent;
+    color: var(--secondary-color); 
+    border: none; 
+    border-radius: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: var(--font-size-medium);
+}
+
+.category-button.active {
+    background-color: var(--primary-color); 
+    color: var(--secondary-color); 
+}
+
+.category-button:hover {
+    color: white;
+    background-color: var(--secondary-color);
+    
+}
+.btn-hide{
+    display: none;
+}
+.pinned-articles{
+    margin-bottom: 20px;
+}
+.pinned{
+    cursor: pointer;
+    display: flex;
+    border: 2px solid #d4d4d4;
+    border-radius: 12px;
+    padding: 5px;
+    font-size: var(--font-size-small);
+    justify-content: left;
+    align-items: center;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin: 1px 0;
+}
+.pinned:hover{
+    border-color: var(--primary-color);
+    box-shadow: 2px 3px;
+}
+.pinned svg{
+    margin-right: 6px;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.pinned:hover svg {
+    animation: rotate 2s linear infinite;
+}
+.pinned-art-desktop{
+    display: none;
+}
+
+
+.sidebar{
+    display: none;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 16px;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a.active {
+    color: var(--primary-color);
+}
+
+.sidebar ul li a:hover{
+    color: var(--primary-color);
+}
+
+.menu-cat-btn{
+    margin: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+a:hover{
+    color: var(--secondary-color);
+}
+
+.image-grid{
+    display: grid;
+    column-gap: 15px;
+}
+.image-grid img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+img {
+    border-radius: 12px;
+}
+
+.profile{
+    margin-bottom: 20px;
+}
+.profile p {
+    margin-top: 1px;
+}
+.idol-page{
+    display: block;
+    margin: 0px 15px;
+}
+.idol-page img{
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .image-grid {
+        grid-template-columns: 1fr; /* Single column */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .image-grid {
+        grid-template-columns: 1fr 1fr; /* Two columns */
+    }
+}
+
+@media (min-width: 901px) {
+    .image-grid {
+        grid-template-columns: 1fr 1fr 1fr; /* Three columns */
+    }
+    .idol-page {
+        display: flex;
+    }
+    .idol-page img{
+        margin: 50px 0 0 -170px;
+    }
+    .idol-page-content{
+        margin: 37px 30px;
+    }
+    
+}
+
+
+
+
+@media (min-width: 768px) {
+    .main{
+        flex-direction:row;
+    }
+    .content{
+        margin: 0 70px 0 15px;
+    }
+
+    .hamburger-icon {
+        display: none; 
+    }
+    .hindi-name{
+        display: block;
+    }
+    .logo{
+        display: none;
+    }
+    .sleeping-boy{
+        margin-top: 0;
+        margin-left: 107px;
+    }
+
+    .menu-items {
+        position: static; 
+        transform: none;
+        width: max-content;
+        
+    }
+
+    .menu-items ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0; 
+        text-align: left;
+    }
+    .navbar{
+        margin-top: 0px;
+        margin: -11px 90px 0px 100px;
+        padding: 0;
+    }
+
+    .article-list{
+        margin: 0 20px;
+    }
+    .article-date{
+        position: absolute;
+        right: 170px;
+    }
+
+    .menu-hide {
+        display: none;
+    }
+    .menu-cat-btn{
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        color: var(--secondary-color);
+        margin: 12px -21px;
+    }
+    .sidebar{
+        display: block;
+    }
+
+    .menu-cat-btn a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .menu-cat-btn svg {
+        margin-right: 5px; /* Space between the icon and text */
+    }
+    .category-button{
+        font-size: var(--font-size-medium);
+        margin: -5px 0;
+    }
+    .category-button.active{
+        color: var(--primary-color);
+        background-color: transparent;
+    }
+    .category-button:hover{
+        background-color: transparent;
+        color: var(--primary-color);
+    }
+    .btn-hide{
+        display: block;
+        text-decoration: none;
+        margin-bottom: 8px;
+    }
+    .pinned-articles{
+        display: none;
+    }
+    .pinned-art-desktop{
+        display: block;
+        position: fixed;
+        bottom: 20px;
+        width: 210px;
+        height: 171px;
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        margin-left: -50px;
+    }
+    .pinned-art-desktop svg{
+        padding: 10px 0 3px 10px;
+    }
+    
+}
+
+
+@media (max-width: 768px) {
+    .article-item {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .article-name {
+        margin-bottom: 5px; /* Add some space between the name and date */
+    }
+}
