@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Article</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@100..900&display=swap" rel="stylesheet">
+    
+    <script src="/script.js"></script>
+
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <svg width="32" height="28" viewBox="0 0 37 28" fill="none"">
+                        <path d="M5.48 21.84L12.16 17.84L16.24 15.76V15.56L13.36 13.96L11.6 12.92C11.0933 12.6267 10.68 12.4267 10.36 12.32C10.0667 12.1867 9.73333 12.12 9.36 12.12C8.98667 12.12 8.62667 12.2 8.28 12.36C7.96 12.52 7.57333 12.7467 7.12 13.04L4.44 14.76L1.88 11.04L4.88 9.12C5.73333 8.58667 6.46667 8.21333 7.08 8C7.69333 7.76 8.30667 7.64 8.92 7.64C9.61333 7.64 10.28 7.74667 10.92 7.96C11.5867 8.14667 12.3467 8.50667 13.2 9.04L15.56 10.48L16.64 11.28L16.76 11.24L16.52 6.84V4.16H0V0H36.96V4.16H21.64V7L21.56 11.8L21.72 11.84L23.6 10.36L29.44 6.44L31.84 9.76L31.44 10.08C31.2267 10.24 31.0267 10.5067 30.84 10.88C30.6533 11.2533 30.56 11.6667 30.56 12.12C30.56 13.0267 30.8267 13.7333 31.36 14.24C31.92 14.7467 32.6267 15 33.48 15H33.84V19.96H32.36C31.2667 19.96 30.4667 20.1733 29.96 20.6C29.4533 21 29.2 21.5333 29.2 22.2C29.2 22.9467 29.4267 23.52 29.88 23.92C30.3333 24.32 31.0667 24.52 32.08 24.52H33.92V27.88H31.92C29.6 27.88 27.8133 27.4 26.56 26.44C25.3333 25.4533 24.72 24.08 24.72 22.32C24.72 21.0933 25.0933 20.04 25.84 19.16C26.6133 18.2533 27.6667 17.64 29 17.32V17.12C28.28 16.7733 27.76 16.3067 27.44 15.72C27.12 15.1333 26.96 14.4933 26.96 13.8V13.56L26.84 13.44L23.88 15.52L21.56 17.12L21.68 23.28L21.64 27.92H16.52V24.12L16.68 20.24L16.52 20.16L14.24 21.88L8.12 25.8L5.48 21.84Z" fill="#0A0A0A"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="hamburger-icon" id="hamburger" onclick="toggleMenu()">
+                <svg id="hamburger-icon" width="30" height="30" viewBox="0 0 30 30" fill="none"">
+                    <path d="M4 7h22M4 15h22M4 23h22" stroke="black" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="menu-items hide-in-desk" id="menu-items">
+                <ul>
+                    <li><a href="/index.html">Website vibe</a></li>
+                    <li><a href="">24 fps</a></li>
+                    <li><a href="/library.html">Library</a></li>
+                    <li><a href="">Clicks </a></li>
+                    <li><a href="">Ink strains</a></li>
+                    <li><a href="">Resume</a></li>
+                    <li><a href="/writings.html">Writings </a></li>
+                    <li><a href="/inspirations.html">Inspirations</a></li>      
+                </ul>
+            </div>
+            <div class="menu-cat-btn">
+                <a href="/library.html" class="btn-hide category-button">
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.00001 7.16663L2.66667 10.5L6.00001 13.8333" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.3333 3.16663V7.83329C13.3333 8.54054 13.0524 9.21881 12.5523 9.71891C12.0522 10.219 11.3739 10.5 10.6667 10.5H2.66667" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    <span id="all">All Articles</span>
+                </a>
+                <div class="sidebar">
+                    <ul>
+                        <li><a href="#section1" class="nav-link active">Introduction</a></li>
+                        <li><a href="#section2" class="nav-link">Subheading 1</a></li>
+                        <li><a href="#section3" class="nav-link">Subheading 2</a></li>
+                        <li><a href="#section4" class="nav-link">Subheading 3</a></li>
+                        <li><a href="#section5" class="nav-link">Conclusion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>    
+
+        
+        <div class="sleeping-boy hide-in-mob-tab">
+            <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M35.2862 24.538C35.805 26.2691 35.2365 27.3869 34.0106 28.4426C32.9875 29.3236 30.6871 28.5198 29.5657 27.8706C21.1021 22.9721 35.4661 13.7979 36.8287 25.3962" stroke="black" stroke-opacity="0.9" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M33.0839 7.59611C31.5091 6.61642 28.5067 6.72957 28.4402 9.16983C28.3474 12.5615 34.2121 13.5467 33.8709 11.1168C33.5706 8.98158 28.0446 8.75884 27.8629 11.6237C27.5904 15.9193 33.1657 15.5747 32.4017 14.7979C28.4402 13.7342 27.7718 16.5362 30.9325 18.0787" stroke="black" stroke-opacity="0.5" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M23.4245 25.2584C21.3693 25.9435 19.6331 26.3569 18.029 27.6558C2.30624 40.3838 23.3153 30.5423 25.1009 33.2202C26.6385 35.5271 23.3443 44.2924 22.5682 47.009" stroke="black" stroke-opacity="0.9" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M23.5957 25.601C26.6849 31.7365 31.5604 29.4514 37.6552 29.4514" stroke="black" stroke-opacity="0.9" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4.00201 22.9025C5.14606 27.4743 7.39681 31.7038 8.75528 36.1187" stroke="black" stroke-opacity="0.5" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.21744 36.1188C13.014 35.3906 17.0857 36.2839 20.8103 35.5393" stroke="black" stroke-opacity="0.5" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14.0052 37.2471C14.2033 40.4557 13.8714 43.652 14.3477 46.8379" stroke="black" stroke-opacity="0.5" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8.52188 45.9883C10.575 42.1794 18.0778 42.7316 19.1872 46.7998" stroke="black" stroke-opacity="0.5" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M28.7716 46.1528C28.6271 41.9289 28.564 37.6816 29.0066 33.4792" stroke="black" stroke-opacity="0.5" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M46.8649 32.7942C46.7112 36.6349 46.972 45.1038 47.1609 46.1528" stroke="black" stroke-opacity="0.5" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M25.9936 30.3966C33.535 30.3966 42.5957 30.3966 49.9706 30.3966" stroke="black" stroke-opacity="0.5" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M44.1137 12.5851C43.2913 16.0104 41.6307 21.174 40.7518 25.5693" stroke="black" stroke-opacity="0.9" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M42.8077 19.5866C43.6801 22.7349 44.6373 25.8393 45.698 28.8859" stroke="black" stroke-opacity="0.5" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M43.0589 29.7655C44.103 29.5952 44.9396 29.6392 46.0749 29.6638" stroke="black" stroke-opacity="0.9" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>  
+        </div>
+
+        <div class="content">
+            <div class="sleeping-boy hide-in-desk">
+                <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M35.2862 24.538C35.805 26.2691 35.2365 27.3869 34.0106 28.4426C32.9875 29.3236 30.6871 28.5198 29.5657 27.8706C21.1021 22.9721 35.4661 13.7979 36.8287 25.3962" stroke="black" stroke-opacity="0.9" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M33.0839 7.59611C31.5091 6.61642 28.5067 6.72957 28.4402 9.16983C28.3474 12.5615 34.2121 13.5467 33.8709 11.1168C33.5706 8.98158 28.0446 8.75884 27.8629 11.6237C27.5904 15.9193 33.1657 15.5747 32.4017 14.7979C28.4402 13.7342 27.7718 16.5362 30.9325 18.0787" stroke="black" stroke-opacity="0.5" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M23.4245 25.2584C21.3693 25.9435 19.6331 26.3569 18.029 27.6558C2.30624 40.3838 23.3153 30.5423 25.1009 33.2202C26.6385 35.5271 23.3443 44.2924 22.5682 47.009" stroke="black" stroke-opacity="0.9" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M23.5957 25.601C26.6849 31.7365 31.5604 29.4514 37.6552 29.4514" stroke="black" stroke-opacity="0.9" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4.00201 22.9025C5.14606 27.4743 7.39681 31.7038 8.75528 36.1187" stroke="black" stroke-opacity="0.5" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.21744 36.1188C13.014 35.3906 17.0857 36.2839 20.8103 35.5393" stroke="black" stroke-opacity="0.5" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14.0052 37.2471C14.2033 40.4557 13.8714 43.652 14.3477 46.8379" stroke="black" stroke-opacity="0.5" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.52188 45.9883C10.575 42.1794 18.0778 42.7316 19.1872 46.7998" stroke="black" stroke-opacity="0.5" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M28.7716 46.1528C28.6271 41.9289 28.564 37.6816 29.0066 33.4792" stroke="black" stroke-opacity="0.5" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M46.8649 32.7942C46.7112 36.6349 46.972 45.1038 47.1609 46.1528" stroke="black" stroke-opacity="0.5" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M25.9936 30.3966C33.535 30.3966 42.5957 30.3966 49.9706 30.3966" stroke="black" stroke-opacity="0.5" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M44.1137 12.5851C43.2913 16.0104 41.6307 21.174 40.7518 25.5693" stroke="black" stroke-opacity="0.9" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M42.8077 19.5866C43.6801 22.7349 44.6373 25.8393 45.698 28.8859" stroke="black" stroke-opacity="0.5" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M43.0589 29.7655C44.103 29.5952 44.9396 29.6392 46.0749 29.6638" stroke="black" stroke-opacity="0.9" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                    
+            </div>
+            
+
+            <h1 class="name">Rishabh Tripathi</h1>
+            <span class="date">28 July, 2024</span>
+
+            <p style="color: var(--secondary-color);">
+                I'm a Product Designer based in Bangalore, India. Originally from Lucknow, I moved to Bangalore to study Philosophy at Azim Premji University. I cleared my A levels with a focus on Commerce, Mathematics, and Computer Science. 
+            </p>
+            
+            <blockquote>
+                <div>
+                    I'm a Product Designer based in Bangalore, India. Originally from Lucknow, I moved to Bangalore to study Philosophy at Azim Premji University. I cleared my A levels with a focus on Commerce, Mathematics, and Computer Science. 
+                </div>
+            </blockquote>
+
+
+
+            <section id="section1">
+                <h2>Introduction</h2>
+                <p>I'm a Product Designer based in Bangalore, India. Originally from Lucknow, I moved to Bangalore to study Philosophy at Azim Premji University. I cleared my A levels with a focus on Commerce, Mathematics, and Computer Science.</p>
+            </section>
+    
+            <section id="section2">
+                <h2>Section 2</h2>
+                <p>I'm a Product Designer based in Bangalore, India. Originally from Lucknow, I moved to Bangalore to study Philosophy at Azim Premji University. I cleared my A levels with a focus on Commerce, Mathematics, and Computer Science.</p>
+                <p>I'm a Product Designer based in Bangalore, India. Originally from Lucknow, I moved to Bangalore to study Philosophy at Azim Premji University. I cleared my A levels with a focus on Commerce, Mathematics, and Computer Science.</p>
+                <p>I'm a Product Designer based in Bangalore, India. Originally from Lucknow, I moved to Bangalore to study Philosophy at Azim Premji University. I cleared my A levels with a focus on Commerce, Mathematics, and Computer Science.</p>
+                <p>I'm a Product Designer based in Bangalore, India. Originally from Lucknow, I moved to Bangalore to study Philosophy at Azim Premji University. I cleared my A levels with a focus on Commerce, Mathematics, and Computer Science.</p>
+                <p>I'm a Product Designer based in Bangalore, India. Originally from Lucknow, I moved to Bangalore to study Philosophy at Azim Premji University. I cleared my A levels with a focus on Commerce, Mathematics, and Computer Science.</p>
+            </section>
+
+            <section>
+                <div class="image-container">
+                    <img src="subhash_chandra_bose.jpg" alt="">
+                    <p class="caption">Fig. 10  only goal is to get this done </p>
+                </div>
+            </section>
+    
+            <section id="section3">
+                <h2>Section 3</h2>
+                <p>I'm a Product Designer based in Bangalore, India. Originally from Lucknow, I moved to Bangalore to study Philosophy at Azim Premji University. I cleared my A levels with a focus on Commerce, Mathematics, and Computer Science.</p>
+                <p>I'm a Product Designer based in Bangalore, India. Originally from Lucknow, I moved to Bangalore to study Philosophy at Azim Premji University. I cleared my A levels with a focus on Commerce, Mathematics, and Computer Science.</p>
+                <p>I'm a Product Designer based in Bangalore, India. Originally from Lucknow, I moved to Bangalore to study Philosophy at Azim Premji University. I cleared my A levels with a focus on Commerce, Mathematics, and Computer Science.</p>
+                <p>I'm a Product Designer based in Bangalore, India. Originally from Lucknow, I moved to Bangalore to study Philosophy at Azim Premji University. I cleared my A levels with a focus on Commerce, Mathematics, and Computer Science.</p>
+            </section>
+
+            <section id="section4">
+                <h2>Section 4</h2>
+                <p>I'm a Product Designer based in Bangalore, India. Originally from Lucknow, I moved to Bangalore to study Philosophy at Azim Premji University. I cleared my A levels with a focus on Commerce, Mathematics, and Computer Science.</p>
+                <p>I'm a Product Designer based in Bangalore, India. Originally from Lucknow, I moved to Bangalore to study Philosophy at Azim Premji University. I cleared my A levels with a focus on Commerce, Mathematics, and Computer Science.</p>
+                <p>I'm a Product Designer based in Bangalore, India. Originally from Lucknow, I moved to Bangalore to study Philosophy at Azim Premji University. I cleared my A levels with a focus on Commerce, Mathematics, and Computer Science.</p>
+                <p>I'm a Product Designer based in Bangalore, India. Originally from Lucknow, I moved to Bangalore to study Philosophy at Azim Premji University. I cleared my A levels with a focus on Commerce, Mathematics, and Computer Science.</p>
+                <p>I'm a Product Designer based in Bangalore, India. Originally from Lucknow, I moved to Bangalore to study Philosophy at Azim Premji University. I cleared my A levels with a focus on Commerce, Mathematics, and Computer Science.</p>
+            </section>
+
+            <section id="section5">
+                <h2>Conclusion</h2>
+                <p>I'm a Product Designer based in Bangalore, India. Originally from Lucknow, I moved to Bangalore to study Philosophy at Azim Premji University. I cleared my A levels with a focus on Commerce, Mathematics, and Computer Science.</p>
+                <p>I'm a Product Designer based in Bangalore, India. Originally from Lucknow, I moved to Bangalore to study Philosophy at Azim Premji University. I cleared my A levels with a focus on Commerce, Mathematics, and Computer Science.</p>
+                <p>I'm a Product Designer based in Bangalore, India. Originally from Lucknow, I moved to Bangalore to study Philosophy at Azim Premji University. I cleared my A levels with a focus on Commerce, Mathematics, and Computer Science.</p><p>I'm a Product Designer based in Bangalore, India. Originally from Lucknow, I moved to Bangalore to study Philosophy at Azim Premji University. I cleared my A levels with a focus on Commerce, Mathematics, and Computer Science.</p>
+                <p>I'm a Product Designer based in Bangalore, India. Originally from Lucknow, I moved to Bangalore to study Philosophy at Azim Premji University. I cleared my A levels with a focus on Commerce, Mathematics, and Computer Science.</p>
+                <p>I'm a Product Designer based in Bangalore, India. Originally from Lucknow, I moved to Bangalore to study Philosophy at Azim Premji University. I cleared my A levels with a focus on Commerce, Mathematics, and Computer Science.</p>
+
+            </section>
+            
+        </div>
+    </div>
+</body>
+
+<style>
+    blockquote{
+        border-left: 5px solid var(--primary-color);
+        border-radius: 3px;
+        margin: 0px;
+        padding: 2px 20px;
+    }
+</style>
+
+</html>

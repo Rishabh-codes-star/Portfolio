@@ -1,7 +1,9 @@
 :root {
     --primary-color: #0A0A0A;
     --border-color: #D4D4D4;
-    --secondary-color: #A3A3A3;
+    --secondary-color: #9A9A99;
+    --background-color: #FAFAFA;
+
     --font-size-large: 20px;
     --font-size-medium: 18px;
     --font-size-small: 16px;
@@ -18,6 +20,7 @@ body {
     color: var(--primary-color);
     font-family: var(--font-family);
     scroll-behavior: smooth;
+    background-color: var(--background-color);
   }
 
   
@@ -30,17 +33,13 @@ body {
 }
 .logo{
     position: absolute;
-    top: 16px;
-    left: 30px;
-    font-weight: 700; 
-    font-size: 30px; 
-    font-family: Noto Sans Devanagari, sans-serif;
+    top: 20px;
+    left: 20px;
     z-index: 3;
+    cursor: pointer;
 }
 .hindi-name{
-    font-weight: 700; 
-    font-size: 18px; 
-    font-family: Noto Sans Devanagari, sans-serif; display:none;
+    display: none;
 }
 .name{
     font-weight: normal;
@@ -48,12 +47,15 @@ body {
 }
 
 .sleeping-boy{
-    margin-left: 22px;
+    margin-left: 13px;
+    margin-top: 0;
 }
 .content{
     display: grid;
-    width: 90%;
-    margin: 0 15px;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 .date{
     color: var(--secondary-color);
@@ -75,10 +77,10 @@ h2{
 
 .hamburger-icon{
     cursor: pointer;
-    position: absolute; /* Keep the hamburger icon in a fixed position */
-    top: 16px; /* Adjust as needed */
-    right: 20px; /* Adjust as needed */
-    z-index: 3; /* Ensure it stays above the menu */
+    position: absolute;
+    top: 16px;
+    right: 20px; 
+    z-index: 3; 
     transition: transform 0.1s ease; 
 }
 
@@ -89,7 +91,7 @@ h2{
     width: 100%; 
     height: 100%;
     transform: translateX(100%);
-    background-color: rgb(255, 255, 255); 
+    background-color: var(--background-color); 
     transition: transform 0.3s ease; 
     font-size: var(--font-size-small);
     z-index: 2; 
@@ -97,7 +99,7 @@ h2{
 
 .menu-items.active {
     transform: translateX(0); 
-    background-color: #ffffff; 
+    background-color: var(--background-color); 
 }
 
 .menu-items ul {
@@ -145,12 +147,11 @@ h2{
 }
 
 .article-list{
-    margin-left: 10px;
+    margin-left: 7px;
 }
 
 .article-item {
     display: flex;
-    justify-content:space-between; 
     padding: 7px 0 ;
     line-height: 15px;
 }
@@ -168,6 +169,7 @@ h2{
 .article-date {
     font-size: var(--font-size-medium);
     color: var(--secondary-color);
+
 }
 
 .category-button {
@@ -202,12 +204,12 @@ h2{
     display: flex;
     border: 2px solid #d4d4d4;
     border-radius: 12px;
-    padding: 5px;
+    padding: 10px 4px;
     font-size: var(--font-size-small);
     justify-content: left;
     align-items: center;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    margin: 1px 0;
+    
 }
 .pinned:hover{
     border-color: var(--primary-color);
@@ -261,7 +263,10 @@ h2{
 }
 
 .menu-cat-btn{
-    margin: 15px;
+    display: flex;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    
 }
 
 a{
@@ -300,9 +305,52 @@ img {
     width: 100%;
 }
 
+.hide-in-mob-tab{
+    display: none;
+}
+
+summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+
+summary::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url('data:image/svg+xml;utf8,<svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.36391 5.56105L11.3137 0.611328L12.7279 2.02554L6.36391 8.38955L0 2.02554L1.41421 0.611328L6.36391 5.56105Z" fill="black"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease;
+    margin-right: 5px;
+    
+}
+
+/* Rotate the icon when the details are open */
+details[open] summary::before {
+    transform: rotate(180deg);
+}
+
+
+
+
 @media (max-width: 600px) {
     .image-grid {
-        grid-template-columns: 1fr; /* Single column */
+        grid-template-columns: 1fr;
+    }
+    .content{
+        margin-left: 12px;
+    }
+    .article-item {
+        display: flex;
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+    .article-name {
+        margin-bottom: 5px; /* Add some space between the name and date */
     }
 }
 
@@ -310,6 +358,15 @@ img {
     .image-grid {
         grid-template-columns: 1fr 1fr; /* Two columns */
     }
+    .article-date{
+        padding-left: auto;
+        position: absolute;
+        right: 120px;
+    }
+    .menu-cat-btn{
+        margin-left: 180px;
+    }
+    
 }
 
 @media (min-width: 901px) {
@@ -332,11 +389,15 @@ img {
 
 
 @media (min-width: 768px) {
+    .hide-in-mob-tab{
+        display: block;
+    }
     .main{
         flex-direction:row;
     }
     .content{
-        margin: 0 70px 0 15px;
+        
+        margin: 0 19% 0 12%;
     }
 
     .hamburger-icon {
@@ -349,8 +410,9 @@ img {
         display: none;
     }
     .sleeping-boy{
-        margin-top: 0;
-        margin-left: 107px;
+        position: relative;
+        left: 75px;
+        
     }
 
     .menu-items {
@@ -371,16 +433,12 @@ img {
         margin: -11px 90px 0px 100px;
         padding: 0;
     }
-
-    .article-list{
-        margin: 0 20px;
-    }
     .article-date{
         position: absolute;
         right: 170px;
     }
 
-    .menu-hide {
+    .hide-in-desk {
         display: none;
     }
     .menu-cat-btn{
@@ -389,6 +447,13 @@ img {
         flex-direction: column;
         color: var(--secondary-color);
         margin: 12px -21px;
+    }
+    .category-button svg{
+        stroke: var(--secondary-color);
+        transition: stroke 0.3s ease;
+    }
+    .category-button:hover svg{
+        stroke: var(--primary-color);
     }
     .sidebar{
         display: block;
@@ -401,7 +466,7 @@ img {
     }
 
     .menu-cat-btn svg {
-        margin-right: 5px; /* Space between the icon and text */
+        margin-right: 5px;
     }
     .category-button{
         font-size: var(--font-size-medium);
@@ -437,17 +502,4 @@ img {
         padding: 10px 0 3px 10px;
     }
     
-}
-
-
-@media (max-width: 768px) {
-    .article-item {
-        display: flex;
-        flex-direction: column; /* Stack items vertically */
-        align-items: flex-start; /* Align items to the start */
-    }
-
-    .article-name {
-        margin-bottom: 5px; /* Add some space between the name and date */
-    }
 }

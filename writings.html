@@ -18,16 +18,21 @@
 <body>
     <div class="main">
         <div class="navbar">
-            <div class="logo">ऋ</div>
+            <div class="logo">
+                <a href="index.html">
+                    <svg width="32" height="28" viewBox="0 0 37 28" fill="none"">
+                        <path d="M5.48 21.84L12.16 17.84L16.24 15.76V15.56L13.36 13.96L11.6 12.92C11.0933 12.6267 10.68 12.4267 10.36 12.32C10.0667 12.1867 9.73333 12.12 9.36 12.12C8.98667 12.12 8.62667 12.2 8.28 12.36C7.96 12.52 7.57333 12.7467 7.12 13.04L4.44 14.76L1.88 11.04L4.88 9.12C5.73333 8.58667 6.46667 8.21333 7.08 8C7.69333 7.76 8.30667 7.64 8.92 7.64C9.61333 7.64 10.28 7.74667 10.92 7.96C11.5867 8.14667 12.3467 8.50667 13.2 9.04L15.56 10.48L16.64 11.28L16.76 11.24L16.52 6.84V4.16H0V0H36.96V4.16H21.64V7L21.56 11.8L21.72 11.84L23.6 10.36L29.44 6.44L31.84 9.76L31.44 10.08C31.2267 10.24 31.0267 10.5067 30.84 10.88C30.6533 11.2533 30.56 11.6667 30.56 12.12C30.56 13.0267 30.8267 13.7333 31.36 14.24C31.92 14.7467 32.6267 15 33.48 15H33.84V19.96H32.36C31.2667 19.96 30.4667 20.1733 29.96 20.6C29.4533 21 29.2 21.5333 29.2 22.2C29.2 22.9467 29.4267 23.52 29.88 23.92C30.3333 24.32 31.0667 24.52 32.08 24.52H33.92V27.88H31.92C29.6 27.88 27.8133 27.4 26.56 26.44C25.3333 25.4533 24.72 24.08 24.72 22.32C24.72 21.0933 25.0933 20.04 25.84 19.16C26.6133 18.2533 27.6667 17.64 29 17.32V17.12C28.28 16.7733 27.76 16.3067 27.44 15.72C27.12 15.1333 26.96 14.4933 26.96 13.8V13.56L26.84 13.44L23.88 15.52L21.56 17.12L21.68 23.28L21.64 27.92H16.52V24.12L16.68 20.24L16.52 20.16L14.24 21.88L8.12 25.8L5.48 21.84Z" fill="#0A0A0A"/>
+                    </svg>
+                </a>
+            </div>
             <div class="hamburger-icon" id="hamburger" onclick="toggleMenu()">
                 <svg id="hamburger-icon" width="30" height="30" viewBox="0 0 30 30" fill="none"">
                     <path d="M4 7h22M4 15h22M4 23h22" stroke="black" stroke-width="2" stroke-linecap="round"/>
                 </svg>
             </div>
-            <div class="menu-items menu-hide" id="menu-items">
+            <div class="menu-items hide-in-desk" id="menu-items">
                 <ul>
-                    <li class="hindi-name">ऋषभ</li>
-                    <li><a href="">Website vibe</a></li>
+                    <li><a href="index.html">Website vibe</a></li>
                     <li><a href="">24 fps</a></li>
                     <li><a href="library.html">Library</a></li>
                     <li><a href="">Clicks </a></li>
@@ -38,10 +43,10 @@
                 </ul>
             </div>
             <div class="menu-cat-btn">
-                <a href="home.html" class="btn-hide category-button">
+                <a href="index.html" class="btn-hide category-button">
                     <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6.00001 7.16663L2.66667 10.5L6.00001 13.8333" stroke="#A3A3A3" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M13.3333 3.16663V7.83329C13.3333 8.54054 13.0524 9.21881 12.5523 9.71891C12.0522 10.219 11.3739 10.5 10.6667 10.5H2.66667" stroke="#A3A3A3" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.00001 7.16663L2.66667 10.5L6.00001 13.8333" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.3333 3.16663V7.83329C13.3333 8.54054 13.0524 9.21881 12.5523 9.71891C12.0522 10.219 11.3739 10.5 10.6667 10.5H2.66667" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     <span>Home</span>
                 </a>
@@ -82,6 +87,7 @@
         
 
         <div class="content">
+
             <div class="pinned-articles">
                 <div class="pinned">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -110,13 +116,13 @@
                 </div>
 
                 <div class="article-item poem">
-                    <a href="" class="article-name" >Article Title 1</a>
+                    <a href="/poems/poem_ashiyan.html" class="article-name" >आशियां</a>
                     <span class="article-date">28/02/2024</span>
                 </div>
-                <div class="article-item poem">
+                <!-- <div class="article-item poem">
                     <a href="" class="article-name">Article Title 2</a>
                     <span class="article-date">28/02/2024</span>
-                </div>
+                </div> -->
                 <div class="article-item note">
                     <a href="" class="article-name">Article Title 3</a>
                     <span class="article-date">28/02/2024</span>
