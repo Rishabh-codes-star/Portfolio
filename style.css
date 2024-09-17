@@ -21,6 +21,7 @@ body {
     font-family: var(--font-family);
     scroll-behavior: smooth;
     background-color: var(--background-color);
+    margin-bottom: 100px;
   }
 
   
@@ -46,16 +47,11 @@ body {
     font-size: var(--font-size-medium);
 }
 
-.sleeping-boy{
-    margin-left: 13px;
-    margin-top: 0;
-}
 .content{
     display: grid;
     max-width: 560px;
     margin-left: auto;
     margin-right: auto;
-    
 }
 .date{
     color: var(--secondary-color);
@@ -266,7 +262,6 @@ h2{
     display: flex;
     margin-bottom: 15px;
     margin-left: 10px;
-    
 }
 
 a{
@@ -281,6 +276,9 @@ a:hover{
 .image-grid{
     display: grid;
     column-gap: 15px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .image-grid img {
     width: 100%;
@@ -333,6 +331,16 @@ details[open] summary::before {
     transform: rotate(180deg);
 }
 
+.climbing-boy{
+    position: fixed;
+    bottom: -5px;
+    left: 0;
+    
+}
+.climbing-boy svg{
+    width: 100px;
+}
+
 
 
 
@@ -363,10 +371,6 @@ details[open] summary::before {
         position: absolute;
         right: 120px;
     }
-    .menu-cat-btn{
-        margin-left: 180px;
-    }
-    
 }
 
 @media (min-width: 901px) {
@@ -389,15 +393,20 @@ details[open] summary::before {
 
 
 @media (min-width: 768px) {
+    .space-left{
+        margin-left: 150px;
+    }
     .hide-in-mob-tab{
         display: block;
     }
     .main{
         flex-direction:row;
     }
+    .sleeping-boy{
+        margin-left: 30px;
+    }
     .content{
-        
-        margin: 0 19% 0 12%;
+        margin: 0 19% 0 2%;
     }
 
     .hamburger-icon {
@@ -409,17 +418,11 @@ details[open] summary::before {
     .logo{
         display: none;
     }
-    .sleeping-boy{
-        position: relative;
-        left: 75px;
-        
-    }
 
     .menu-items {
         position: static; 
         transform: none;
         width: max-content;
-        
     }
 
     .menu-items ul {
@@ -430,8 +433,8 @@ details[open] summary::before {
     }
     .navbar{
         margin-top: 0px;
-        margin: -11px 90px 0px 100px;
-        padding: 0;
+        margin: -11px 100px 0px 100px;
+        
     }
     .article-date{
         position: absolute;
@@ -446,7 +449,7 @@ details[open] summary::before {
         position: fixed;
         flex-direction: column;
         color: var(--secondary-color);
-        margin: 12px -21px;
+        margin: 12px 0 0 -21px;
     }
     .category-button svg{
         stroke: var(--secondary-color);
@@ -463,6 +466,10 @@ details[open] summary::before {
         display: flex;
         align-items: center;
         text-decoration: none;
+        font-size: var(--font-size-small);
+    }
+    .menu-cat-btn button{
+        font-size: var(--font-size-small);
     }
 
     .menu-cat-btn svg {
