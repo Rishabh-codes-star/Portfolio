@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>आशियां</title>
+    <title>Resume</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,66 +43,33 @@
                 </ul>
             </div>
             <div class="menu-cat-btn">
-                <a href="/library.html" class="btn-hide category-button">
+                <a href="/index.html" class="btn-hide category-button">
                     <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6.00001 7.16663L2.66667 10.5L6.00001 13.8333" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M13.3333 3.16663V7.83329C13.3333 8.54054 13.0524 9.21881 12.5523 9.71891C12.0522 10.219 11.3739 10.5 10.6667 10.5H2.66667" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                    <span id="all">All Poems</span>
+                    <span id="all">Home</span>
                 </a>
-                <div class="sidebar">
-                    <ul>
-                        <li><a href="#section1" class="nav-link active">आशियां</a></li>
-                        <li><a href="#section2" class="nav-link">Footnotes</a></li>
-                    </ul>
-                </div>
             </div>
         </div>    
 
         <div class="space-left"></div>
 
-        <div class="content">
-            <section id="section1">
-                <h1 class="name">आशियां</h1>
-                <span class="date">28 July, 2024</span>
-            </section>
+        <div style="margin: 0 10px;">
+            <p>
+                I'm a Product Designer based in Bangalore, India. Originally from Lucknow, I moved to Bangalore to study Philosophy at Azim Premji University. I cleared my A levels with a focus on Commerce, Mathematics, and Computer Science. 
+            </p>
 
-            <section>
-                <p>चलो, बनाएं एक आशियां,</p>
-                <p>जहाँ सिर्फ तुम और हम हों।</p>
-                <br>
-                <p>जहाँ हमारा प्यार हो,</p>
-                <p>एक दूसरे के लिए दुलार हो,</p>
-                <p>जहाँ बोध गया जैसा अहसास हो,</p>
-                <p>जहाँ सच्चाई संघ शांति का वास हो,</p>
-                <p>जहा हो जाये तब्दिल सारी अव्यवस्था सुव्यवस्था में,</p>
-                <p>वैसा कुछ वहा का माहौल हो</p>
-                
-                <br>
-
-                <p>जहाँ के पानी में आराम हो,</p>
-                <p>जहाँ की हवा में जैसे के सिया राम हो,</p>
-                <p>जहाँ की छतों पर सिर्फ तुम हम,</p>
-                <p>वह चाय की प्याली और सुंदर आसमान हो,</p>
-
-                <br>
-
-                <p>चलो, बनाएं एक आशियां,</p>
-                <p>जहाँ सिर्फ तुम हम और हमारा प्यार हो।</p>
-            </section>
-            <br>
-            <section id="section2">
-                <details>
-                    <summary style="font-weight: 500; font-size: 18px;">Footnotes</summary>
-                    <ul>
-                        <li>Footnote 1: Explanation or reference.</li>
-                        <li>Footnote 2: Another explanation or reference.</li>
-                        <li>Footnote 3: Additional details about the topic.</li>
-                    </ul>
-                </details>
-            </section>
-            <br>
+            <!-- It will open resume pdf in a new tab -->
+            <a target="_blank" href="resume.pdf">
+                <button type="button" class="download-button">Download PDF (120KB)</button>
+            </a>
             
+
+            <!-- <a href="resume.pdf" download></a>
+                <button type="button" class="download-button">Download PDF (120KB)</button>
+            </a> -->
+
         </div>
     </div>
 </body>
@@ -113,6 +80,22 @@
         border-radius: 3px;
         margin: 0px;
         padding: 2px 20px;
+    }
+    .download-button{
+        margin-top: 10px;
+        width: 260px;
+        background-color: var(--primary-color);
+        color: var(--secondary-color); 
+        border: none; 
+        border-radius: 20px;
+        padding: 10px 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        font-size: var(--font-size-medium);
+    }
+    .download-button:hover{
+        background-color: var(--secondary-color);
+        color: #FAFAFA;
     }
 </style>
 
